@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granada Urban Fest - News</title>
+    <link rel="stylesheet" href="css/styles3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/news.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/logoG.png" alt="Logo">
+                </a>               
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="tickets.html">TICKETS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="lastEdition.html">GUF 24'</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>LATEST NEWS</h1>
+        </div>
+    </header>
+
+    <!-- Sección de Noticias Destacadas -->
+    <section class="featured-news">
+        <h2>Featured News</h2>
+        <div class="news-item featured-news-item" data-category="featured">
+            <img src="assets/img/anuel.jpg" alt="Noticia Destacada">
+            <h3>Headline of the Featured News</h3>
+            <p>This is the body of the featured news. You can add a brief description or summary of the news here.</p>
+            <div class="news-meta">
+                <span class="news-date"><i class="fas fa-calendar-alt"></i> June 1, 2025</span>
+                <span class="news-tags"><i class="fas fa-hashtag"></i> #Festival #Music #Granada</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Categorías -->
+    <section class="news-categories">
+        <h2>Categories</h2>
+        <ul>
+            <li><a href="#" id="all">All</a></li>
+            <li><a href="#" id="music">Music</a></li>
+            <li><a href="#" id="artists">Artists</a></li>
+            <li><a href="#" id="events">Events</a></li>
+            <li><a href="#" id="announcements">Announcements</a></li>
+        </ul>
+    </section>
+
+    <!-- Sección de Noticias -->
+    <section class="news-section">
+        <div class="news-item" data-category="music">
+            <img src="assets/img/anuel.jpg" alt="Noticia 1">
+            <h3>Título de la Noticia 1</h3>
+            <p>Este es el cuerpo de la noticia 1. Aquí puedes añadir una breve descripción o resumen de la noticia.</p>
+            <div class="news-meta">
+                <span class="news-date"><i class="fas fa-calendar-alt"></i> June 1, 2025</span>
+                <span class="news-tags"><i class="fas fa-hashtag"></i> #Festival #Music #Granada</span>
+            </div>
+        </div>
+        <div class="news-item" data-category="artists">
+            <img src="assets/img/delarose.jpg" alt="Noticia 2">
+            <h3>Título de la Noticia 2</h3>
+            <p>Este es el cuerpo de la noticia 2. Aquí puedes añadir una breve descripción o resumen de la noticia.</p>
+            <div class="news-meta">
+                <span class="news-date"><i class="fas fa-calendar-alt"></i> June 2, 2025</span>
+                <span class="news-tags"><i class="fas fa-hashtag"></i> #Festival #Urban #Granada</span>
+            </div>
+        </div>
+        <!-- Añade más noticias aquí -->
+    </section>
+
+    <!-- Sección de Suscripción -->
+    <section class="subscription-section">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit" class="button">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="logof">
+            <img src="assets/img/logoFest-sf.png" alt="Festival Logo">
+        </div>
+        <div class="cities">
+            <button>🔗 MADRID</button>
+            <button>🔗 SEVILLA</button>
+            <button>🔗 PUERTO DE SANTA MARIA</button>
+            <button>🔗 TORREMOLINOS</button>
+            <button>🔗 ALMERÍA</button>
+        </div>
+        <hr>
+        <div class="links">
+            <a href="#">CONDICIONES GENERALES</a>
+            <a href="#">AVISO LEGAL</a>
+            <a href="#">POLÍTICA DE COOKIES</a>
+            <a href="#">RESOLUCIÓN DE LITIGIOS EN LÍNEA</a>
+        </div>
+        <div class="socials">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Filtrar noticias por categoría
+        const categories = document.querySelectorAll('.news-categories ul li a');
+        const newsItems = document.querySelectorAll('.news-item');
+        const featuredNewsItem = document.querySelector('.featured-news-item');
+
+        categories.forEach(category => {
+            category.addEventListener('click', (e) => {
+                e.preventDefault();
+                const categoryId = category.id;
+
+                newsItems.forEach(item => {
+                    if (categoryId === 'all' || item.getAttribute('data-category') === categoryId) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // Asegurarse de que la noticia destacada siempre se muestre
+                featuredNewsItem.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>

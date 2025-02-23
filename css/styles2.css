@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../assets/img/fondo\ pagina.jpg'); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* -----------------HEADER-----------------*/
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 2vh 2vw;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    color: white;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegurar que el contenedor ocupe toda la altura del hero */
+    text-align: center; /* Centrar el texto */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 0 5vw;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.hero {
+    background-image: url('../assets/img/fondoHero3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: relative;
+}
+
+.logo {
+    flex: 1; 
+}
+
+.logo img {
+    height: 9vh;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex: 2; 
+    justify-content: flex-end; 
+    flex-wrap: wrap;
+    color: white;
+}
+
+.nav-links li {
+    margin-left: 2vw;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2vw;
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+}
+
+.nav-social {
+    display: flex;
+    gap: 1vw;
+    flex: 1; 
+    justify-content: flex-end; 
+}
+
+.nav-social img {
+    height: 5vh;
+    transition: transform 0.3s;
+}
+
+.nav-social img:hover {
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/*-------------TICKETS---------*/
+
+.header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.content{
+    background-color: white;
+}
+.sub-header {
+    background-color: #eee;
+    padding: 10px;
+    font-size: 18px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 80px;
+}
+.map {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 80%;
+    max-width: 500px;
+    margin-top: 20px;
+}
+.section {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.escenario {
+    background-color: black; grid-column: span 2; 
+    margin-bottom: 30px;
+}
+.platino { background-color: #1e90ff; grid-column: span 2;}
+.oro { background-color: #dc143c; grid-column: span 2;}
+.general {
+    background-color: #5a35c0; grid-column: span 2;
+    padding: 70px;
+}
+.button {
+    margin-top: 40px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button:hover {
+    background-color: #555;
+}
+
+/*---------------FORMULARIO--------------*/
+
+.map-form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.form-container {
+    flex: 1;
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+.form-container button {
+    background: #ff6347;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: #e5533d;
+}
+
+/*----------TERMINOS--------*/
+
+.terms-section {
+    padding: 4rem 6vw;
+    background-color: #fff;
+    text-align: left;
+}
+
+.terms-section h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 4vw;
+    margin-bottom: 2rem;
+    color: black;
+}
+
+.terms-section ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+.terms-section li {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/*----------FOOTER----------*/
+footer {
+    background-image: url('../assets/img/fondoHero4.jpg');
+    color: white;
+    text-align: center;
+    padding: 60px;
+    font-family: Arial, sans-serif;
+}
+
+.logof img {
+    height: 220px;
+    max-width: 500px; /* Ajusta el tamaño de la imagen */
+    margin-bottom: 15px; /* Espaciado entre la imagen y los botones */
+}
+
+.cities {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.cities button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+hr {
+    width: 50%;
+    margin: 10px auto;
+    border: 1px solid white;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.socials {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.socials a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: #ddd;
+}
+
+/* ------------------MEDIA QUERIES---------------------*/
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1vw 0;
+    }
+
+    .nav-links a {
+        font-size: 4vw;
+    }
+
+    .nav-social {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .map {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .map-form-container {
+        flex-direction: column;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .terms-section {
+        padding: 2rem 1rem;
+    }
+
+    .terms-section h2 {
+        font-size: 6vw;
+    }
+
+    .terms-section li {
+        font-size: 1.2rem;
+    }
+}

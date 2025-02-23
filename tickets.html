@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granada Urban Fest - Tickets</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/logoG.png" alt="Logo">
+                </a>               
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="tickets.html">TICKETS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="lastEdition.html">GUF 24'</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>BUY YOUR TICKETS NOW</h1>
+        </div>
+    </header>
+
+    <div class="terms-section">
+        <h2>Terms and Conditions</h2>
+        <ul>
+            <li>All ticket sales are final. No refunds or exchanges will be provided.</li>
+            <li>Tickets are non-transferable and must be used by the person whose name appears on the ticket.</li>
+            <li>Entry to the event is subject to security checks. Please arrive early to avoid delays.</li>
+            <li>Outside food and beverages are not allowed inside the event premises.</li>
+            <li>Smoking is strictly prohibited within the event area.</li>
+            <li>By purchasing a ticket, you agree to comply with all event rules and regulations.</li>
+            <li>The event organizers reserve the right to make changes to the event schedule without prior notice.</li>
+            <li>In case of event cancellation, only the face value of the ticket will be refunded.</li>
+            <li>Attendees must carry a valid ID proof along with the ticket for entry.</li>
+            <li>Any form of harassment or misconduct will result in immediate removal from the event premises.</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="header">GRANADA URBAN FEST 2025</div>
+        <div class="sub-header">Sábado, 10 de junio de 2025 - 17:00</div>
+        <div class="container">
+            <h2>Recinto Granada Latina</h2>
+            <div class="map-form-container">
+                <div class="map">
+                    <div class="section escenario">ESCENARIO</div>
+                    <div class="section platino">ZONA PLATINO</div>
+                    <div class="section oro">ZONA ORO</div>
+                    <div class="section general">ZONA GENERAL</div>
+                </div>
+            <div class="form-container">
+                <form>
+                    <label for="num-tickets">Número de Entradas:</label>
+                    <input type="number" id="num-tickets" name="num-tickets" min="1" required>
+
+                    <label for="zone">Zona:</label>
+                    <select id="zone" name="zone" required>
+                        <option value="platino">ZONA PLATINO</option>
+                        <option value="oro">ZONA ORO</option>
+                        <option value="general">ZONA GENERAL</option>
+                    </select>
+
+                    <label for="name">Nombre y Apellidos:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="address">Dirección:</label>
+                    <input type="text" id="address" name="address" required>
+
+                    <label for="postal-code">Código Postal:</label>
+                    <input type="text" id="postal-code" name="postal-code" required>
+
+                    <label for="phone">Número de Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="observations">Observaciones:</label>
+                    <textarea id="observations" name="observations" rows="4"></textarea>
+
+                    <button type="submit" class="button">Proceed to pay</button>
+                </form>
+            </div>
+        </div> 
+
+    </div>
+    
+
+    <footer>
+        <div class="logof">
+            <img src="assets/img/logoFest-sf.png" alt="Festival Logo">
+        </div>
+        <div class="cities">
+            <button>🔗 MADRID</button>
+            <button>🔗 SEVILLA</button>
+            <button>🔗 PUERTO DE SANTA MARIA</button>
+            <button>🔗 TORREMOLINOS</button>
+            <button>🔗 ALMERÍA</button>
+        </div>
+        <hr>
+        <div class="links">
+            <a href="#">CONDICIONES GENERALES</a>
+            <a href="#">AVISO LEGAL</a>
+            <a href="#">POLÍTICA DE COOKIES</a>
+            <a href="#">RESOLUCIÓN DE LITIGIOS EN LÍNEA</a>
+        </div>
+        <div class="socials">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

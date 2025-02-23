@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../assets/img/fondo\ pagina.jpg'); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* -----------------HEADER-----------------*/
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 2vh 2vw;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    color: white;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegurar que el contenedor ocupe toda la altura del hero */
+    text-align: center; /* Centrar el texto */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 0 5vw;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.hero {
+    background-image: url('../assets/img/fondoHero6.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: relative;
+}
+
+.logo {
+    flex: 1; 
+}
+
+.logo img {
+    height: 9vh;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex: 2; 
+    justify-content: flex-end; 
+    flex-wrap: wrap;
+    color: white;
+}
+
+.nav-links li {
+    margin-left: 2vw;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2vw;
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+}
+
+.nav-social {
+    display: flex;
+    gap: 1vw;
+    flex: 1; 
+    justify-content: flex-end; 
+}
+
+.nav-social img {
+    height: 5vh;
+    transition: transform 0.3s;
+}
+
+.nav-social img:hover {
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+
+/*----------FOOTER----------*/
+footer {
+    background-image: url('../assets/img/fondoHero4.jpg');
+    color: white;
+    text-align: center;
+    padding: 60px;
+    font-family: Arial, sans-serif;
+}
+
+.logof img {
+    height: 220px;
+    max-width: 500px; /* Ajusta el tamaño de la imagen */
+    margin-bottom: 15px; /* Espaciado entre la imagen y los botones */
+}
+
+.cities {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.cities button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+hr {
+    width: 50%;
+    margin: 10px auto;
+    border: 1px solid white;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.socials {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.socials a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: #ddd;
+}
+
+/*---------NEWS---------*/
+.news-section {
+    padding: 4rem 6vw;
+    background-color: #fff;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.news-item {
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    flex: 1 1 calc(50% - 2rem); /* Mostrar en columnas de dos */
+    transition: transform 0.3s;
+}
+
+
+.news-item:hover {
+    transform: scale(1.02);
+}
+
+.news-item img {
+    width: 100%;
+    height: 400px; /* Ajustar la altura fija de las imágenes */
+    object-fit: cover; /* Asegurar que las imágenes no se deformen */
+    margin-bottom: 1rem;
+}
+
+.news-item h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.news-item p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.news-meta i {
+    margin-right: 0.5rem;
+}
+
+.news-date,
+.news-tags {
+    display: flex;
+    align-items: center;
+}
+
+/* Sección de Noticias Destacadas */
+.featured-news {
+    padding: 4rem 6vw;
+    background-color: #f0f0f0;
+    text-align: left;
+}
+
+.featured-news h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ff6347;
+}
+
+.featured-news .news-item {
+    flex: 1 1 100%;
+}
+
+/* Sección de Categorías */
+.news-categories {
+    padding: 2rem 6vw;
+    background-color: #fff;
+    text-align: left;
+}
+
+.news-categories h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ff6347;
+}
+
+.news-categories ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.news-categories ul li {
+    font-size: 1.2rem;
+}
+
+.news-categories ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.news-categories ul li a:hover {
+    color: #ff6347;
+}
+
+/* Sección de Suscripción */
+.subscription-section {
+    padding: 4rem 6vw;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.subscription-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ff6347;
+}
+
+.subscription-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscription-section label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subscription-section input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.subscription-section .button {
+    background: #ff6347;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.subscription-section .button:hover {
+    background: #e5533d;
+}
+
+/* ------------------MEDIA QUERIES---------------------*/
+@media (max-width: 768px) {
+    .news-item {
+        flex: 1 1 100%; /* Mostrar en una columna en pantallas pequeñas */
+    }
+
+    .featured-news .news-item {
+        flex: 1 1 100%;
+    }
+
+    .news-categories ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .subscription-section form {
+        width: 100%;
+    }
+
+    .subscription-section input {
+        width: 80%;
+    }
+}
+
+/* ------------------MEDIA QUERIES---------------------*/
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1vw 0;
+    }
+
+    .nav-links a {
+        font-size: 4vw;
+    }
+
+    .nav-social {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granada Urban Fest</title>
+    <link rel="stylesheet" href="css/styles5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/logoG.png" alt="Logo">
+                </a>               
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="tickets.html">TICKETS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="lastEdition.html">GUF 24'</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1 class="slide-in-left">CONTACT US</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Contact</h2>
+        <p style="text-align:center;">Leave us any questions or incidents here.</p>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="text" placeholder="Empresa/Organización">
+            <textarea placeholder="Mensaje" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div class="contact-info">
+            <p><strong>Grain & Mortar</strong></p>
+            <p>1111 N. 13th St. Suite 141, Omaha, NE 68102</p>
+            <p><a href="mailto:hello@grainandmortar.com">hello@grainandmortar.com</a></p>
+            <p>Tel: 402-370-8170</p>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086487364764!2d-122.419415484681!3d37.77492927975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0f0f0f0%3A0x0!2zMzfCsDQ2JzI5LjgiTiAxMjLCsDI1JzEwLjkiVw!5e0!3m2!1sen!2sus!4v1633024800000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <footer>
+        <div class="logof">
+            <img src="assets/img/logoFest-sf.png" alt="Festival Logo">
+        </div>
+        <div class="cities">
+            <button>🔗 MADRID</button>
+            <button>🔗 SEVILLA</button>
+            <button>🔗 PUERTO DE SANTA MARIA</button>
+            <button>🔗 TORREMOLINOS</button>
+            <button>🔗 ALMERÍA</button>
+        </div>
+        <hr>
+        <div class="links">
+            <a href="#">CONDICIONES GENERALES</a>
+            <a href="#">AVISO LEGAL</a>
+            <a href="#">POLÍTICA DE COOKIES</a>
+            <a href="#">RESOLUCIÓN DE LITIGIOS EN LÍNEA</a>
+        </div>
+        <div class="socials">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+    
+
+    <script>
+        // Menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
