@@ -28,7 +28,7 @@ h1 {
     font-size: 6.5rem;
     font-weight: bold;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-    opacity: 0.8;
+    opacity: 1;
     color: white;
 }
 
@@ -155,213 +155,306 @@ h1 {
     max-width: 80%;
 }
 
-.gallery-section {
-    padding: 4rem 6vw;
-    background-color: #fff;
-    animation: fadeIn 2s;
-}
+/*----INTRO----*/
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.gallery-item {
-    flex: 1 1 calc(25% - 1rem);
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-.testimonials-section {
-    padding: 4rem 6vw;
-    background-color: #f8f8f8;
+/* Festival Introduction */
+.festival-intro {
+    background: black; /* Fondo oscuro */
+    color: white;
     text-align: center;
-    animation: fadeIn 2s;
-}
-
-.testimonials {
+    padding: 100px 20px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
+    align-items: center;
 }
 
-.testimonial {
-    flex: 1 1 calc(33% - 2rem);
-    background-color: #fff;
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+.intro-container {
+    max-width: 800px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.testimonial:hover {
-    transform: scale(1.05);
+.festival-intro h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ff6347; /* Rojo cinematográfico */
+    text-shadow: 0 0 20px rgba(255, 99, 71, 0.5);
 }
 
-.testimonial p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
-.testimonial span {
-    font-size: 0.9rem;
-    color: #999;
-}
-
-.lineup-section {
-    padding: 4rem 6vw;
-    background-color: #fff;
-    animation: fadeIn 2s;
-}
-
-.lineup {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-}
-
-.artist {
-    flex: 1 1 calc(33% - 2rem);
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.artist img {
-    width: 100%;
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.artist p {
-    margin-top: 1rem;
+.festival-intro p {
     font-size: 1.2rem;
-    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #ccc;
+    opacity: 0.9;
 }
 
-.artist:hover {
-    transform: scale(1.05);
+/* Animación Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.stats-section {
-    padding: 4rem 6vw;
-    background-color: #f8f8f8;
+/*--------------TIMELINE------------*/
+
+/* Festival Schedule Section */
+.festival-schedule {
+    background: url('../assets/img/anuelConc.jpg') left/cover no-repeat;
+    color: white;
     text-align: center;
+    padding: 80px 20px;
+}
+
+/* Introductory Text */
+.schedule-intro {
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 50px;
     animation: fadeIn 2s;
 }
 
-.stats {
+.schedule-intro h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6347;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(255, 99, 71, 0.5);
+}
+
+.schedule-intro p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* Container for Timeline and Image */
+.schedule-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Timeline on the Left */
+.timeline {
+    position: relative;
+    width: 50%;
+    padding-left: 20px;
+}
+
+/* Vertical Line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: #ff6347;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin-left: -2px;
+}
+
+/* Timeline Items */
+.timeline-item {
+    position: relative;
+    margin: 40px 0;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6347;
+    width: 120px;
+    text-align: left;
+}
+
+.event {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(255, 99, 71, 0.3);
+}
+
+.event h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.event p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-top: 5px;
+}
+
+/* Image on the Right */
+.schedule-image {
+    width: 45%;
+    display: flex;
     justify-content: center;
 }
 
-.stat {
-    flex: 1 1 calc(25% - 2rem);
-    background-color: #fff;
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+.schedule-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(255, 99, 71, 0.3);
 }
 
-.stat:hover {
-    transform: scale(1.05);
+/* Responsive Design */
+@media (max-width: 900px) {
+    .schedule-container {
+        flex-direction: column;
+    }
+
+    .timeline {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .schedule-image {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        padding-left: 40px;
+    }
+
+    .time {
+        font-size: 1.2rem;
+    }
+
+    .event h3 {
+        font-size: 1.1rem;
+    }
 }
 
-.stat h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #ff6347;
+/*------------PERFORMANCE--------*/
+
+/* General Styling */
+.artist-performance {
+    background: #000; /* Fondo negro */
+    color: white;
+    padding: 80px 20px;
 }
 
-.stat p {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
+/* Contenedor de cada artista */
+.artist-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
     margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
+    padding: 40px 0;
+    opacity: 1; /* Siempre visible al cargar */
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
+/* Imagen del artista */
+.artist-image {
+    width: 50%;
+}
+
+.artist-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Información del artista */
+.artist-info {
+    width: 40%;
+    text-align: left;
+}
+
+.artist-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.artist-info h2 {
+    font-size: 3rem;
     font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
+    text-transform: uppercase;
+    color: #ff6347;
+    margin-bottom: 15px;
 }
 
-.close:hover,
-.close:focus {
-    color: #bbb;
+.artist-info p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ccc;
+    opacity: 0.9;
+}
+
+/* Botón "Read More" */
+.see-more {
+    font-size: 1rem;
+    color: white;
     text-decoration: none;
-    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.see-more:hover {
+    color: #ff6347;
+    border-bottom: 2px solid #ff6347;
 }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Alternar lado de la imagen para cada fila */
+.artist-container.reverse {
+    flex-direction: row-reverse;
 }
 
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Animación de fade-in pero asegurando que se vea al cargar */
+.artist-container.hidden {
+    opacity: 0;
+    transform: translateY(50px);
 }
 
-@keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-100%); }
-    to { opacity: 1; transform: translateX(0); }
+/* Cuando entra en pantalla */
+.artist-container.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.fade-in {
-    animation: fadeIn 2s forwards;
+/* Responsive Design */
+@media (max-width: 900px) {
+    .artist-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .artist-info {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .artist-image {
+        width: 100%;
+    }
 }
 
-.slide-in-left {
-    animation: slideInLeft 1.5s forwards;
-}
+
 
 /*----------FOOTER----------*/
 footer {

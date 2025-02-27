@@ -112,7 +112,7 @@ header {
 }
 
 .subtitle {
-    font-family: 'Bangers';
+    font-family: 'Montserrat', 'Poppins', 'Bebas Neue', sans-serif;
     font-size: 3.7vw;
     margin-top: 0.5rem;
 }
@@ -126,13 +126,17 @@ header {
 
 .time {
     text-align: center;
-    font-family: 'Bangers';
+    h1, h2 {
+    font-size: 48px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 }
 
 .time p {
     text-align: center;
     font-size: 1vw;
-    font-family: 'Bangers';
+    font-family: 'Montserrat', 'Poppins', 'Bebas Neue', sans-serif;
 }
 
 .number {
@@ -199,8 +203,11 @@ header {
 }
 
 .slider-title {
-    font-family: 'Bangers', cursive;
-    font-size: 4vw;
+    font-family: 'Montserrat', 'Poppins', 'Bebas Neue', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 5vw;
     margin-right: 1rem;
 }
 
@@ -313,9 +320,11 @@ header {
     text-align: left;
 
 }
+
+
 .news-title {
-    font-family: 'Bangers', cursive;
-    font-size: 4vw;
+    font-family: 'Montserrat', 'Poppins', 'Bebas Neue', sans-serif;
+    font-size: 6vw;
     margin-right: 1rem;
     overflow: hidden;
 }
@@ -389,8 +398,11 @@ header {
 }
 
 .images-title {
-    font-family: 'Bangers', cursive;
-    font-size: 4vw;
+    font-family: 'Montserrat', 'Poppins', 'Bebas Neue', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 5vw;
     margin-right: 1rem;
 }
 

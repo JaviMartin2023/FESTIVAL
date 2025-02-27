@@ -184,6 +184,34 @@ h1 {
 
 /*---------------FORMULARIO--------------*/
 
+/* Contenedor del título del formulario */
+.form-title-container {
+    width: 60%; /* Más estrecho */
+    max-width: 800px; /* Límite para pantallas grandes */
+    text-align: center;
+    background: #f8f8f8; /* Color de fondo */
+    padding: 20px;
+    margin: 50px auto; /* Centrado */
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    border-top: 5px solid #230222; /* Línea superior */
+}
+
+/* Subtítulo del formulario */
+.form-subtitle {
+    width: 60%;
+    max-width: 800px;
+    text-align: center;
+    background: #f8f8f8;
+    padding: 10px;
+    margin: 0 auto 0px auto;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+
 .map-form-container {
     display: flex;
     justify-content: space-between;
@@ -218,7 +246,7 @@ h1 {
 }
 
 .form-container button {
-    background: #ff6347;
+    background: #230222;
     color: white;
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -230,34 +258,408 @@ h1 {
 }
 
 .form-container button:hover {
-    background: #e5533d;
+    background: #230222;
 }
 
 /*----------TERMINOS--------*/
 
+/* Sección de términos */
+
+
 .terms-section {
-    padding: 4rem 6vw;
-    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: white;
+    padding: 0;
+    width: 100%;
+    padding: 2rem 0;
     text-align: left;
 }
 
+/* Título */
+
+/* Contenedor del título y la línea */
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Título */
 .terms-section h2 {
-    font-family: 'Bangers', cursive;
-    font-size: 4vw;
-    margin-bottom: 2rem;
+    font-family: 'Montserrat', 'Poppins', 'Bebas Neue', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 3.7vw;
+    margin-right: 1rem; /* Espacio entre el título y la línea */
+    white-space: nowrap;
+    margin-left: 50px;
+}
+
+/* Línea horizontal alineada a la derecha */
+.horizontal-bar {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    height: 2px;
+    background-color: #000;
+    margin-left: 50px; /* Elimina espacio a la izquierda */
+}
+
+
+/* Contenedor Principal (Ocupando Todo el Ancho) */
+.terms-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70vh;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: left;
+    padding: 50px;
+}
+
+/* Imagen de la izquierda */
+.terms-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.terms-image img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%; /* Si quieres la imagen en un círculo */
+}
+
+/* Contenido de términos */
+.terms-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 50px;
+}
+
+/* Elementos individuales */
+.term-item {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding: 15px;
+    border-bottom: 2px solid #230222;
+}
+
+/* Íconos a la izquierda */
+.term-icon {
+    font-size: 30px;
+    color: #230222;
+    margin-right: 15px;
+}
+
+/* Texto */
+.term-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.term-text p {
+    font-size: 14px;
+   
+}
+
+/*----------------PRICES---------------*/
+
+/* Ticket Pricing Section */
+.ticket-pricing {
+    text-align: center;
+    background: url('../assets/img/fondoBanner2.jpg') center/cover no-repeat; 
+    padding: 60px 20px;
+    color: white;
+}
+
+.ticket-pricing h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: #FFD700;
+}
+
+/* Pricing Cards Container */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Pricing Card */
+.pricing-card {
+    background: #16162b;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.pricing-card:hover {
+    transform: scale(1.05);
+}
+
+/* Pricing Card Titles */
+.pricing-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Pricing Text */
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Features List */
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.pricing-card ul li {
+    font-size: 1rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Ticket Buttons */
+.btn {
+    display: inline-block;
+    background: #FFD700;
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #ffcc00;
+}
+
+/* Unique Colors for Each Ticket Type */
+.standard h3, .standard .price {
+    color: #ffb400;
+}
+
+.premium h3, .premium .price {
+    color: #00d9ff;
+}
+
+.vip h3, .vip .price {
+    color: #ff4747;
+}
+
+/*------------------ACCESO--------------------*/
+
+/* General Styles */
+.access-info {
+    text-align: center;
+    padding: 60px 20px;
+    background: #230222; /* Fondo negro */
+    color: white;
+}
+
+.access-info h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFD700; /* Dorado para resaltar */
+}
+
+.access-info p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+/* Timeline Container */
+.access-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Timeline Row */
+.access-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* Timeline Items */
+.access-item {
+    width: 45%;
+    background: #41043e; /* Fondo oscuro */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Dots (Icons on Timeline) */
+.access-icon {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #FFD700; /* Dorado */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
     color: black;
 }
 
-.terms-section ul {
-    list-style-type: disc;
-    padding-left: 2rem;
+/* Right-side Icons */
+.access-item.right .access-icon {
+    left: auto;
+    right: -30px;
 }
 
-.terms-section li {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    line-height: 1.5;
+/* Text Colors */
+.access-content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
 }
+
+.access-content p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .access-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .access-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .access-item.right .access-icon,
+    .access-item.left .access-icon {
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+/*-----------FOOD-----------*/
+
+/* Festival Reminder Section */
+.festival-reminder {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    color: #333;
+}
+
+.festival-reminder h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #230222; /* Rojo/naranja para dar sensación de calor */
+}
+
+.festival-reminder p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Container for Reminder Items */
+.reminder-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Reminder Item */
+.reminder-item {
+    display: flex;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 250px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.reminder-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Icons */
+.reminder-icon {
+    font-size: 40px;
+    color: #ff6347;
+    background: rgba(255, 99, 71, 0.1);
+    padding: 15px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Text Content */
+.reminder-content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.reminder-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .reminder-container {
+        flex-direction: column;
+    }
+
+    .reminder-item {
+        width: 90%;
+        text-align: left;
+    }
+}
+
+
+
 
 /*----------FOOTER----------*/
 footer {
