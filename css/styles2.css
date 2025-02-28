@@ -36,8 +36,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Asegurar que el contenedor ocupe toda la altura del hero */
-    text-align: center; /* Centrar el texto */
+    height: 100%; 
+    text-align: center; 
 }
 
 .navbar {
@@ -184,22 +184,22 @@ h1 {
 
 /*---------------FORMULARIO--------------*/
 
-/* Contenedor del título del formulario */
+
 .form-title-container {
-    width: 60%; /* Más estrecho */
-    max-width: 800px; /* Límite para pantallas grandes */
+    width: 60%; 
+    max-width: 800px; 
     text-align: center;
-    background: #f8f8f8; /* Color de fondo */
+    background: #f8f8f8;
     padding: 20px;
-    margin: 50px auto; /* Centrado */
+    margin: 50px auto;
     margin-bottom: 10px;
     font-size: 1.8rem;
     font-weight: bold;
     color: #333;
-    border-top: 5px solid #230222; /* Línea superior */
+    border-top: 5px solid #230222; 
 }
 
-/* Subtítulo del formulario */
+
 .form-subtitle {
     width: 60%;
     max-width: 800px;
@@ -261,9 +261,7 @@ h1 {
     background: #230222;
 }
 
-/*----------TERMINOS--------*/
-
-/* Sección de términos */
+/*----------TERMINOS----------*/
 
 
 .terms-section {
@@ -274,73 +272,67 @@ h1 {
     justify-content: center;
     text-align: center;
     background: white;
-    padding: 0;
-    width: 100%;
     padding: 2rem 0;
-    text-align: left;
 }
 
-/* Título */
 
-/* Contenedor del título y la línea */
 .title-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    justify-content: flex-start;
     width: 100%;
     margin-bottom: 20px;
-    position: relative;
+    padding: 0 5%;
 }
 
-/* Título */
+
 .terms-section h2 {
     font-family: 'Montserrat', 'Poppins', 'Bebas Neue', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 3.7vw;
-    margin-right: 1rem; /* Espacio entre el título y la línea */
+    font-size: 3.5vw;
     white-space: nowrap;
-    margin-left: 50px;
+    margin-right: 1rem;
 }
 
-/* Línea horizontal alineada a la derecha */
+
 .horizontal-bar {
-    flex-grow: 1; /* Ocupa el espacio restante */
+    flex-grow: 1;
     height: 2px;
     background-color: #000;
-    margin-left: 50px; /* Elimina espacio a la izquierda */
 }
 
 
-/* Contenedor Principal (Ocupando Todo el Ancho) */
 .terms-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 70vh;
+    height: auto;
     background: rgba(255, 255, 255, 0.9);
     text-align: left;
     padding: 50px;
+    flex-wrap: wrap;
 }
 
-/* Imagen de la izquierda */
 .terms-image {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 300px;
 }
 
 .terms-image img {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     object-fit: cover;
-    border-radius: 50%; /* Si quieres la imagen en un círculo */
+    border-radius: 50%;
 }
 
-/* Contenido de términos */
+
 .terms-content {
     flex: 2;
     display: flex;
@@ -349,7 +341,7 @@ h1 {
     padding-left: 50px;
 }
 
-/* Elementos individuales */
+
 .term-item {
     display: flex;
     align-items: center;
@@ -358,14 +350,14 @@ h1 {
     border-bottom: 2px solid #230222;
 }
 
-/* Íconos a la izquierda */
+
 .term-icon {
     font-size: 30px;
     color: #230222;
     margin-right: 15px;
 }
 
-/* Texto */
+
 .term-text h3 {
     font-size: 20px;
     font-weight: bold;
@@ -374,12 +366,68 @@ h1 {
 
 .term-text p {
     font-size: 14px;
-   
 }
+
+/*----- RESPONSIVE DESIGN -----*/
+@media (max-width: 1024px) {
+    .terms-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .terms-content {
+        padding-left: 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .terms-image {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .terms-section h2 {
+        font-size: 5vw;
+        margin-bottom: 10px;
+    }
+
+    .horizontal-bar {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .terms-container {
+        padding: 20px;
+    }
+
+    .terms-image img {
+        max-width: 300px;
+    }
+
+    .term-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .term-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
 
 /*----------------PRICES---------------*/
 
-/* Ticket Pricing Section */
+
 .ticket-pricing {
     text-align: center;
     background: url('../assets/img/fondoBanner2.jpg') center/cover no-repeat; 
@@ -395,7 +443,7 @@ h1 {
     color: #FFD700;
 }
 
-/* Pricing Cards Container */
+
 .pricing-container {
     display: flex;
     justify-content: center;
@@ -403,7 +451,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-/* Individual Pricing Card */
+
 .pricing-card {
     background: #16162b;
     padding: 40px;
@@ -418,21 +466,21 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Pricing Card Titles */
+
 .pricing-card h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
-/* Pricing Text */
+
 .price {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-/* Features List */
+
 .pricing-card ul {
     list-style: none;
     padding: 0;
@@ -445,7 +493,7 @@ h1 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Ticket Buttons */
+
 .btn {
     display: inline-block;
     background: #FFD700;
@@ -462,7 +510,7 @@ h1 {
     background: #ffcc00;
 }
 
-/* Unique Colors for Each Ticket Type */
+
 .standard h3, .standard .price {
     color: #ffb400;
 }
@@ -477,18 +525,18 @@ h1 {
 
 /*------------------ACCESO--------------------*/
 
-/* General Styles */
+
 .access-info {
     text-align: center;
     padding: 60px 20px;
-    background: #230222; /* Fondo negro */
+    background: #230222; 
     color: white;
 }
 
 .access-info h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #FFD700; /* Dorado para resaltar */
+    color: #FFD700; 
 }
 
 .access-info p {
@@ -497,14 +545,14 @@ h1 {
     margin-bottom: 40px;
 }
 
-/* Timeline Container */
+
 .access-timeline {
     position: relative;
     max-width: 1000px;
     margin: auto;
 }
 
-/* Timeline Row */
+
 .access-row {
     display: flex;
     justify-content: space-between;
@@ -512,10 +560,10 @@ h1 {
     margin-bottom: 40px;
 }
 
-/* Timeline Items */
+
 .access-item {
     width: 45%;
-    background: #41043e; /* Fondo oscuro */
+    background: #41043e; 
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -523,7 +571,7 @@ h1 {
     box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
 }
 
-/* Dots (Icons on Timeline) */
+
 .access-icon {
     position: absolute;
     top: 50%;
@@ -531,7 +579,7 @@ h1 {
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
-    background-color: #FFD700; /* Dorado */
+    background-color: #FFD700; 
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -540,13 +588,13 @@ h1 {
     color: black;
 }
 
-/* Right-side Icons */
+
 .access-item.right .access-icon {
     left: auto;
     right: -30px;
 }
 
-/* Text Colors */
+
 .access-content h3 {
     font-size: 1.5rem;
     font-weight: bold;
@@ -558,7 +606,7 @@ h1 {
     color: #bbb;
 }
 
-/* Responsive Design */
+/* ---------Responsive Design ------------*/
 @media (max-width: 900px) {
     .access-row {
         flex-direction: column;
@@ -579,7 +627,7 @@ h1 {
 
 /*-----------FOOD-----------*/
 
-/* Festival Reminder Section */
+
 .festival-reminder {
     text-align: center;
     padding: 60px 20px;
@@ -590,7 +638,7 @@ h1 {
 .festival-reminder h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #230222; /* Rojo/naranja para dar sensación de calor */
+    color: #230222; 
 }
 
 .festival-reminder p {
@@ -599,7 +647,7 @@ h1 {
     margin-bottom: 40px;
 }
 
-/* Container for Reminder Items */
+
 .reminder-container {
     display: flex;
     justify-content: center;
@@ -607,7 +655,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-/* Individual Reminder Item */
+
 .reminder-item {
     display: flex;
     align-items: center;
@@ -624,7 +672,7 @@ h1 {
     transform: translateY(-5px);
 }
 
-/* Icons */
+
 .reminder-icon {
     font-size: 40px;
     color: #ff6347;
@@ -634,7 +682,7 @@ h1 {
     margin-right: 15px;
 }
 
-/* Text Content */
+
 .reminder-content h3 {
     font-size: 1.5rem;
     font-weight: bold;
@@ -642,11 +690,12 @@ h1 {
 }
 
 .reminder-content p {
+    margin-top: 10px;
     font-size: 1rem;
     color: #666;
 }
 
-/* Responsive Design */
+/*----------- Responsive Design----------------- */
 @media (max-width: 900px) {
     .reminder-container {
         flex-direction: column;
@@ -655,6 +704,10 @@ h1 {
     .reminder-item {
         width: 90%;
         text-align: left;
+    }
+
+    .access-icon {
+        display: none; 
     }
 }
 
@@ -672,8 +725,8 @@ footer {
 
 .logof img {
     height: 220px;
-    max-width: 500px; /* Ajusta el tamaño de la imagen */
-    margin-bottom: 15px; /* Espaciado entre la imagen y los botones */
+    max-width: 500px; 
+    margin-bottom: 15px; 
 }
 
 .cities {

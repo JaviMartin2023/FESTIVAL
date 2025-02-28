@@ -86,7 +86,7 @@
                 <div class="timeline-item">
                     <div class="time">6:15 PM</div>
                     <div class="event">
-                        <h3>Mora</h3>
+                        <h3>Maka</h3>
                         <p>Igniting the crowd with their first performance of the night.</p>
                     </div>
                 </div>
@@ -148,12 +148,12 @@
         <!-- Artista 1 -->
         <div class="artist-container">
             <div class="artist-image">
-                <img src="assets/img/mora.jpeg" alt="Artist 1 Performance">
+                <img src="assets/img/maka.webp" alt="Artist 1 Performance">
             </div>
             <div class="artist-info">
-                <h2>Mora</h2>
+                <h2>Maka</h2>
                 <p>
-                    The crowd went wild as <strong>Mora</strong> took the stage, delivering a **breathtaking performance**. 
+                    The crowd went wild as <strong>Maka</strong> took the stage, delivering a **breathtaking performance**. 
                     With an explosive mix of <em>rhythms, energy, and stage presence</em>, they turned the festival into an **unforgettable spectacle**.
                 </p>
                 <a href="#" class="see-more">→ Go to video</a>
@@ -222,7 +222,35 @@
     </section>
     
     
+    <section class="festival-gallery">
+        <div class="gallery-header">
+            <h2 class="gallery-title">FESTIVAL MEMORIES</h2>
+            <p class="gallery-subtitle">Reliving the best moments—because **you** made them unforgettable.</p>
+        </div>
+        
+        <div class="masonry-gallery">
+            <div class="gallery-item"><img src="assets/img/anuel.jpg" alt="Festival Moment 1"></div>
+            <div class="gallery-item"><img src="assets/img/maka.webp" alt="Festival Moment 2"></div>
+            <div class="gallery-item"><img src="assets/img/f3.jpg" alt="Festival Moment 3"></div>
+            <div class="gallery-item"><img src="assets/img/f4.jpg" alt="Festival Moment 4"></div>
+            <div class="gallery-item"><img src="assets/img/f5.jpg" alt="Festival Moment 5"></div>
+            <div class="gallery-item"><img src="assets/img/f6.jpg" alt="Festival Moment 6"></div>
+            <div class="gallery-item"><img src="assets/img/f7.jpg" alt="Festival Moment 7"></div>
+            <div class="gallery-item"><img src="assets/img/f8.jpg" alt="Festival Moment 8"></div>
+            <div class="gallery-item"><img src="assets/img/lolafest.jpg" alt="Festival Moment 9"></div>
+            <div class="gallery-item"><img src="assets/img/cazzufest.avif" alt="Festival Moment 10"></div>
+            <div class="gallery-item"><img src="assets/img/f9.jpg" alt="Festival Moment 11"></div>
+            <div class="gallery-item"><img src="assets/img/f10.jpg" alt="Festival Moment 12"></div>
+            <div class="gallery-item"><img src="assets/img/f11.avif" alt="Festival Moment 13"></div>
+            <div class="gallery-item"><img src="assets/img/f12.jpg" alt="Festival Moment 14"></div>
+            <div class="gallery-item"><img src="assets/img/f13.jpg" alt="Festival Moment 15"></div>
+            <div class="gallery-item"><img src="assets/img/f16.avif" alt="Festival Moment 16"></div>
+        </div>
+    </section>
     
+    <section class="final-banner">
+        <h2>Thank You for an Amazing Year at Granada Urban Fest!</h2>
+    </section>
     
 
 
@@ -239,10 +267,10 @@
         </div>
         <hr>
         <div class="links">
-            <a href="#">CONDICIONES GENERALES</a>
-            <a href="#">AVISO LEGAL</a>
-            <a href="#">POLÍTICA DE COOKIES</a>
-            <a href="#">RESOLUCIÓN DE LITIGIOS EN LÍNEA</a>
+            <a href="#">GENERAL CONDITIONS</a>
+            <a href="#">LEGAL NOTICE</a>
+            <a href="#">COOKIE POLICY</a>
+            <a href="#">ONLINE DISPUTE RESOLUTION</a>
         </div>
         <div class="socials">
             <a href="#"><i class="fab fa-facebook"></i></a>
@@ -298,27 +326,6 @@
             }
         });
 
-        //Imagenes
-        document.addEventListener("DOMContentLoaded", function () {
-    const artistSections = document.querySelectorAll(".artist-container");
-
-    // Elimina la clase "hidden" si no necesitas ocultar las secciones antes de la animación
-    artistSections.forEach((section) => {
-        section.classList.remove("hidden"); // Asegurar que no desaparezcan
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
-        });
-    }, { threshold: 0.3 });
-
-    artistSections.forEach((section) => {
-        observer.observe(section);
-    });
-});
 
 
 

@@ -38,19 +38,19 @@
             <div class="countdown">
                 <div class="time">
                     <span id="days" class="number">126</span>
-                    <p>Días</p>
+                    <p>DAYS</p>
                 </div>
                 <div class="time">
                     <span id="hours" class="number">22</span>
-                    <p>Horas</p>
+                    <p>HOURS</p>
                 </div>
                 <div class="time">
                     <span id="minutes" class="number">16</span>
-                    <p>Minutos</p>
+                    <p>MINUTES</p>
                 </div>
                 <div class="time">
                     <span id="seconds" class="number">17</span>
-                    <p>Segundos</p>
+                    <p>SECONDS</p>
                 </div>
             </div>
         </div>
@@ -58,17 +58,17 @@
 
     <div class="banner">
         <div class="banner-content">
-            <h1 class="">Compra tus entradas</h1>
+            <h1 class="">Don't miss out on your tickets!!!</h1>
             <a href="tickets.html" class="btn">
                 <img src="assets/img/carrito-de-compras.png" alt="Logo">
-                Comprar Entradas
+                Buy tickets
             </a>
         </div>
     </div>
 
     <div class="slider-section">
         <div class="title-container ">
-            <h2 class="slider-title moving-title">Confirmaciones 2025</h2>
+            <h2 class="slider-title moving-title">Confirmations 2025</h2>
             <div class="horizontal-bar"></div>
         </div>
         <div class="slider">
@@ -79,11 +79,11 @@
                 </div>
                 <div class="artist">
                     <img src="assets/img/delarose.jpg" alt="delarose">
-                    <p>Delarose</p>
+                    <p>De La Rose</p>
                 </div>
                 <div class="artist">
                     <img src="assets/img/anuel.jpg" alt="anuel">
-                    <p>Anuel</p>
+                    <p>Anuel AA</p>
                 </div>
             </div>
             <div class="slide">
@@ -97,7 +97,7 @@
                 </div>
                 <div class="artist">
                     <img src="assets/img/omar.jpg" alt="omar">
-                    <p>Omar</p>
+                    <p>Omar Courtz</p>
                 </div>
             </div>
         </div>
@@ -115,20 +115,20 @@
 
     <div class="news-section">
         <div class="title-container ">
-            <h2 class="news-title moving-title">NOTICIAS</h2>
+            <h2 class="news-title moving-title">NEWS</h2>
             <div class="horizontal-bar-news"></div>
         </div>
         <div class="news">
             <div class="news-item">
                 <img src="assets/img/mystery.jpg" alt="Noticia 1">
-                <h3>Título de la Noticia 1</h3>
-                <p>Este es el cuerpo de la noticia 1. Aquí puedes añadir una breve descripción o resumen de la noticia.</p>
+                <h3>Next confirmation</h3>
+                <p>A <span class="neg">rose</span> arrives from Puerto Rico to conquer the hearts of all Granadans.</p>
                 <a href="news.html" class="btn">Read more</a>
             </div>
             <div class="news-item">
                 <img src="assets/img/saikogr.png" alt="Noticia 2">
-                <h3>Título de la Noticia 2</h3>
-                <p>Este es el cuerpo de la noticia 2. Aquí puedes añadir una breve descripción o resumen de la noticia.</p>
+                <h3>Saiko will conquer her land again</h3>
+                <p>The Granada singer is the <span class="neg">last confirmed</span> for Granada Urban Fest 2025.</p>
                 <a href="news.html" class="btn">Read more</a>
             </div>
         </div>
@@ -136,7 +136,7 @@
 
     <div class="images-section">
         <div class="title-container moving-title">
-            <h2 class="images-title">Imágenes 2024</h2>
+            <h2 class="images-title">IMAGES 2024</h2>
             <div class="horizontal-bar"></div>
         </div>
         <div class="gallery">
@@ -168,10 +168,10 @@
         </div>
         <hr>
         <div class="links">
-            <a href="#">CONDICIONES GENERALES</a>
-            <a href="#">AVISO LEGAL</a>
-            <a href="#">POLÍTICA DE COOKIES</a>
-            <a href="#">RESOLUCIÓN DE LITIGIOS EN LÍNEA</a>
+            <a href="#">GENERAL CONDITIONS</a>
+            <a href="#">LEGAL NOTICE</a>
+            <a href="#">COOKIE POLICY</a>
+            <a href="#">ONLINE DISPUTE RESOLUTION</a>
         </div>
         <div class="socials">
             <a href="#"><i class="fab fa-facebook"></i></a>
@@ -222,7 +222,7 @@
         function autoSlide() {
             slideIndex++;
             showSlides(slideIndex);
-            setTimeout(autoSlide, 7000); 
+            setTimeout(autoSlide, 4500); 
         }
         autoSlide();
 
@@ -233,13 +233,14 @@
             const windowWidth = window.innerWidth;
 
             titles.forEach(title => {
-                if (windowWidth > 768) { // Desactivar el movimiento en pantallas pequeñas
+                if (windowWidth > 768) { 
                     title.style.transform = `translateX(${scrollPosition * 0.1}px)`;
                 } else {
-                    title.style.transform = 'translateX(0)'; // Resetear la posición en pantallas pequeñas
+                    title.style.transform = 'translateX(0)';
                 }
             });
         });
     </script>
+    
 </body>
 </html>

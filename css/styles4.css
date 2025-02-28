@@ -36,8 +36,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Asegurar que el contenedor ocupe toda la altura del hero */
-    text-align: center; /* Centrar el texto */
+    height: 100%; 
+    text-align: center; 
 }
 
 .navbar {
@@ -157,9 +157,9 @@ h1 {
 
 /*----INTRO----*/
 
-/* Festival Introduction */
+
 .festival-intro {
-    background: black; /* Fondo oscuro */
+    background: black; 
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -178,7 +178,7 @@ h1 {
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
-    color: #ff6347; /* Rojo cinematográfico */
+    color: #ff6347; 
     text-shadow: 0 0 20px rgba(255, 99, 71, 0.5);
 }
 
@@ -190,7 +190,7 @@ h1 {
     opacity: 0.9;
 }
 
-/* Animación Fade In */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -204,7 +204,7 @@ h1 {
 
 /*--------------TIMELINE------------*/
 
-/* Festival Schedule Section */
+
 .festival-schedule {
     background: url('../assets/img/anuelConc.jpg') left/cover no-repeat;
     color: white;
@@ -212,7 +212,7 @@ h1 {
     padding: 80px 20px;
 }
 
-/* Introductory Text */
+
 .schedule-intro {
     max-width: 800px;
     margin: auto;
@@ -234,7 +234,7 @@ h1 {
     margin-top: 10px;
 }
 
-/* Container for Timeline and Image */
+
 .schedule-container {
     display: flex;
     justify-content: space-between;
@@ -244,14 +244,14 @@ h1 {
     padding: 20px;
 }
 
-/* Timeline on the Left */
+
 .timeline {
     position: relative;
     width: 50%;
     padding-left: 20px;
 }
 
-/* Vertical Line */
+
 .timeline::before {
     content: "";
     position: absolute;
@@ -263,7 +263,7 @@ h1 {
     margin-left: -2px;
 }
 
-/* Timeline Items */
+ 
 .timeline-item {
     position: relative;
     margin: 40px 0;
@@ -300,7 +300,7 @@ h1 {
     margin-top: 5px;
 }
 
-/* Image on the Right */
+
 .schedule-image {
     width: 45%;
     display: flex;
@@ -313,7 +313,7 @@ h1 {
     box-shadow: 0px 5px 20px rgba(255, 99, 71, 0.3);
 }
 
-/* Responsive Design */
+
 @media (max-width: 900px) {
     .schedule-container {
         flex-direction: column;
@@ -349,14 +349,14 @@ h1 {
 
 /*------------PERFORMANCE--------*/
 
-/* General Styling */
+
 .artist-performance {
     background: #000; /* Fondo negro */
     color: white;
     padding: 80px 20px;
 }
 
-/* Contenedor de cada artista */
+
 .artist-container {
     display: flex;
     align-items: center;
@@ -364,12 +364,13 @@ h1 {
     max-width: 1200px;
     margin: auto;
     padding: 40px 0;
-    opacity: 1; /* Siempre visible al cargar */
-    transform: translateY(0);
+    opacity: 1;
+    transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
+    flex-wrap: wrap; 
 }
 
-/* Imagen del artista */
+
 .artist-image {
     width: 50%;
 }
@@ -378,17 +379,16 @@ h1 {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.2);
+    max-height: 450px; 
+    object-fit: cover;
 }
 
-/* Información del artista */
+
 .artist-info {
     width: 40%;
     text-align: left;
 }
 
-.artist-container:nth-child(even) {
-    flex-direction: row-reverse;
-}
 .artist-info h2 {
     font-size: 3rem;
     font-weight: bold;
@@ -404,7 +404,7 @@ h1 {
     opacity: 0.9;
 }
 
-/* Botón "Read More" */
+
 .see-more {
     font-size: 1rem;
     color: white;
@@ -420,24 +420,86 @@ h1 {
     border-bottom: 2px solid #ff6347;
 }
 
-/* Alternar lado de la imagen para cada fila */
-.artist-container.reverse {
+
+.artist-container:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-/* Animación de fade-in pero asegurando que se vea al cargar */
-.artist-container.hidden {
-    opacity: 0;
-    transform: translateY(50px);
+
+@media (max-width: 1024px) {
+    .timeline::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: #ff6347;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin-left: -2px;
+}
+    .artist-container {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .artist-image, .artist-info {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .artist-info h2 {
+        font-size: 2.5rem; 
+    }
+
+    .artist-info p {
+        font-size: 1.1rem;
+    }
 }
 
-/* Cuando entra en pantalla */
-.artist-container.show {
-    opacity: 1;
-    transform: translateY(0);
+@media (max-width: 768px) {
+    .artist-performance {
+        padding: 50px 15px; 
+    }
+
+    .artist-info h2 {
+        font-size: 2rem; 
+    }
+
+    .artist-info p {
+        font-size: 1rem;
+    }
+
+    .see-more {
+        font-size: 0.9rem;
+    }
+
+    .artist-image img {
+        max-height: 350px; 
+    }
 }
 
-/* Responsive Design */
+@media (max-width: 480px) {
+    .artist-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .artist-info p {
+        font-size: 0.9rem;
+    }
+
+    .see-more {
+        font-size: 0.85rem;
+    }
+
+    .artist-image img {
+        max-height: 300px;
+    }
+}
+
+
+
+
 @media (max-width: 900px) {
     .artist-container {
         flex-direction: column;
@@ -454,6 +516,164 @@ h1 {
     }
 }
 
+/*-----MASONRY-----------*/
+
+
+
+.festival-gallery {
+    background: #0d0d0d;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gallery-header {
+    text-align: left;
+    padding-left: 5vw;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.gallery-title {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.gallery-title::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.gallery-subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+
+.masonry-gallery {
+    column-count: 4;
+    column-gap: 10px;
+    padding: 0 5vw;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    break-inside: avoid;
+    overflow: hidden;
+
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.gallery-item.tall {
+    grid-row: span 2;
+}
+
+.gallery-item.wide {
+    grid-column: span 2;
+}
+
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 900px) {
+    .masonry-gallery {
+        column-count: 2;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1vw 0;
+    }
+
+    .nav-links a {
+        font-size: 4vw;
+    }
+
+    .nav-social {
+        display: none;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .masonry-gallery {
+        column-count: 1;
+    }
+
+    .gallery-title {
+        font-size: 2.5rem;
+    }
+}
+
+/*--------------------FINAL-------------*/
+
+.final-banner {
+    background: url('../assets/img/festban.jpg') center/cover no-repeat;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    position: relative;
+}
+
+.final-banner h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px rgba(255, 99, 71, 0.7);
+    margin-bottom: 20px;
+}
+
+.final-banner p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff6347;
+    text-transform: uppercase;
+}
+
+.loading-gif {
+    margin-top: 30px;
+    width: 80px;
+    height: auto;
+}
 
 
 /*----------FOOTER----------*/
@@ -467,8 +687,8 @@ footer {
 
 .logof img {
     height: 220px;
-    max-width: 500px; /* Ajusta el tamaño de la imagen */
-    margin-bottom: 15px; /* Espaciado entre la imagen y los botones */
+    max-width: 500px; 
+    margin-bottom: 15px; 
 }
 
 .cities {
@@ -527,7 +747,7 @@ hr {
     color: #ddd;
 }
 
-/* Media Queries */
+
 @media (max-width: 768px) {
     .gallery-item, .testimonial, .artist, .stat {
         flex: 1 1 100%;

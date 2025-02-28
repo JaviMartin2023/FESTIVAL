@@ -15,6 +15,12 @@ body {
     overflow-x: hidden;
 }
 
+.neg {
+    font-weight: bold;
+    color: black; 
+}
+
+
 /* -----------------HEADER-----------------*/
 header {
     position: absolute;
@@ -240,11 +246,28 @@ header {
     margin-top: 0.5rem;
 }
 .artist {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 1%;
+    text-align: center;
+    position: relative;
 }
+
+.artist p {
+    font-family: 'Bebas Neue', cursive; 
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+    margin-top: 10px;
+}
+
+.artist::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background: black; 
+    margin: 10px auto 5px auto;
+}
+
 
 .artist img {
     width: 100%;
@@ -254,12 +277,6 @@ header {
     border-radius: 10px;
 }
 
-.artist p {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2vw;
-    margin-top: 0.5rem;
-}
 
 @keyframes fade {
     from {opacity: .4} 
@@ -316,8 +333,9 @@ header {
 /*--------------NEWS------------*/
 .news-section {
     width: 100%;
-    padding: 2rem 6vw; /* Añadir márgenes laterales */
+    padding: 2rem 6vw; 
     text-align: left;
+    height: 135vh;
 
 }
 
@@ -338,41 +356,53 @@ header {
 }
 
 .news-item {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     min-width: 45%;
     background-color: #fff;
-    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 0 1%; /* Añadir margen lateral entre los elementos */
+    text-align: left;
+    margin: 0 1%; 
+    padding: 30px;
 }
 
 .news-item img {
     width: 100%;
-    height: auto;
+    height: 70%; 
+    object-fit: cover; 
+    margin-bottom: 30px;
+}
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%; 
+    padding: 1rem;
 }
 
 .news-item h3 {
-    font-size: 2rem;
-    margin: 1rem 0;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
 }
 
 .news-item p {
     font-size: 1rem;
-    padding: 0 1rem;
-    line-height: 1.5;
+    color: #444;
 }
 
 .news-item .btn {
     display: inline-block;
-    margin: 1rem 0;
+    margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #ff6347;
+    background-color:purple;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 3px;
     transition: background 0.3s;
+    align-self: flex-start;
 }
 
 .news-item .btn:hover {
@@ -410,19 +440,19 @@ header {
     display: flex;
     margin-top: 50px;
     flex-direction: column;
-    gap: 1rem; /* Espacio entre las filas */
+    gap: 1rem; 
 }
 
 .gallery-row {
     display: flex;
     justify-content: space-between;
-    gap: 0; /* Eliminar el espacio entre las imágenes */
+    gap: 0; 
 }
 .gallery-row img {
-    width: auto; /* Ajustar el ancho de las imágenes para que ocupen todo el ancho del contenedor */
-    height: 310px; /* Ajustar la altura fija de las imágenes */
-    object-fit: cover; /* Asegurar que las imágenes no se deformen */
-    border-radius: 0; /* Eliminar el borde redondeado */
+    width: auto; 
+    height: 310px; 
+    object-fit: cover; 
+    border-radius: 0; 
 }
 
 /*----------FOOTER----------*/
@@ -436,8 +466,8 @@ footer {
 
 .logof img {
     height: 220px;
-    max-width: 500px; /* Ajusta el tamaño de la imagen */
-    margin-bottom: 15px; /* Espaciado entre la imagen y los botones */
+    max-width: 500px; 
+    margin-bottom: 15px; 
 }
 
 .cities {
@@ -502,10 +532,10 @@ hr {
 .slider-section,
 .news-section,
 .images-section {
-    min-height: 100vh; /* Asegurar que cada sección ocupe al menos una pantalla completa */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrar el contenido verticalmente */
+    justify-content: center; 
 }
 
 .slider-section {
@@ -516,7 +546,7 @@ hr {
 
 .news-section {
     width: 100%;
-    padding: 2rem 6vw; /* Añadir márgenes laterales */
+    padding: 2rem 6vw; 
     text-align: left;
 }
 
@@ -583,53 +613,53 @@ hr {
     }
 
     .slider {
-        padding: 0 1rem; /* Añadir padding para evitar que las imágenes toquen los bordes */
+        padding: 0 1rem;
     }
 
     .slide {
-        flex-direction: column; /* Cambiar la dirección de las imágenes a columna */
+        flex-direction: column;
     }
 
     .slide img {
-        width: 100%; /* Asegurar que las imágenes ocupen todo el ancho del contenedor */
-        height: auto; /* Mantener la proporción de las imágenes */
-        margin: 1rem 0; /* Añadir margen entre las imágenes */
+        width: 100%; 
+        height: auto;
+        margin: 1rem 0; 
     }
 
     .video-section {
-        flex-direction: column; /* Cambiar la dirección de los elementos a columna */
-        padding: 3rem 1rem; /* Ajustar el padding para pantallas pequeñas */
+        flex-direction: column; 
+        padding: 3rem 1rem; 
     }
 
     .video-container {
-        max-width: 100%; /* Asegurar que el video ocupe todo el ancho del contenedor */
+        max-width: 100%; 
     }
 
     .video-container iframe {
-        height: auto; /* Ajustar la altura del video automáticamente */
+        height: auto;
     }
 
     .description-container {
-        max-width: 100%; /* Asegurar que el texto ocupe todo el ancho del contenedor */
-        text-align: center; /* Centrar el texto */
-        margin-top: 2rem; /* Añadir margen superior */
+        max-width: 100%; 
+        text-align: center; 
+        margin-top: 2rem; 
     }
 
     .description-container h3 {
-        font-size: 1.5rem; /* Ajustar el tamaño de la fuente para pantallas pequeñas */
+        font-size: 1.5rem; 
     }
 
     .description-container p {
-        font-size: 0.9rem; /* Ajustar el tamaño de la fuente para pantallas pequeñas */
+        font-size: 0.9rem; 
     }
 
     .gallery-row {
-        flex-direction: column; /* Cambiar la dirección de las imágenes a columna */
+        flex-direction: column; 
     }
 
     .gallery-row img {
-        width: 100%; /* Asegurar que las imágenes ocupen todo el ancho del contenedor */
-        height: auto; /* Ajustar la altura automáticamente */
-        margin-bottom: 1rem; /* Añadir margen inferior entre las imágenes */
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 1rem; 
     }
 }
